@@ -10,7 +10,7 @@ const ContactForm = () => {
   const onSubmit = (data) => {
     axios.post("https://reqres.in/api/contact", data)
       .then(res => {
-        console.log(res.data);
+        console.log("cea: ContactForm.js: onSubmit(): axios post: res.data: ", res.data);
         setData(res.data);
       })
       .catch(err => console.log(err.message));
